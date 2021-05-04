@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.scss";
+import { Form } from "./components/Form";
 
 function App() {
   const [key, setKey] = useState("");
@@ -49,6 +50,7 @@ function App() {
       <button className='as-note'></button>
       <button className='bs-note'></button>
       <div className='log'> {renderKey()}</div>
+      <Form />
     </div>
   );
 }
