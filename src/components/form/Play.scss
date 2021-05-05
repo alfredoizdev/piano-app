@@ -5,7 +5,15 @@
   border-radius: 5px;
   background: limegreen;
   transition: all 0.3s;
-  position: fixed;
+  position: absolute;
+  top: 558px;
+  left: 466px;
+  width: 190px;
+
+  &:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 
   &:hover {
     background-color: #8bc34a;
