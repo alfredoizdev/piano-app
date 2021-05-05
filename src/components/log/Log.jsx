@@ -1,9 +1,10 @@
 import React from "react";
 import { useAppContext } from "context/AppContext";
+import classNames from "classnames";
 import "./Log.scss";
 
 const Log = () => {
-  const { keyLogs } = useAppContext();
+  const { keyLogs, selected } = useAppContext();
 
   return (
     <>
@@ -11,7 +12,14 @@ const Log = () => {
         <div className='log'>
           <div className='log-container'>
             {keyLogs.map((key, index) => (
-              <p key={index}>{key}</p>
+              <p
+                className={classNames({
+                  activetext: selected === key,
+                })}
+                key={index}
+              >
+                {key},{" "}
+              </p>
             ))}
           </div>
         </div>
