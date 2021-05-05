@@ -1,6 +1,7 @@
 import React from "react";
 import "./Piano.scss";
 import { useAppContext } from "context/AppContext";
+import PropTypes from 'prop-types';
 import classNames from "classnames";
 
 const PianoKey = ({ k }) => {
@@ -23,6 +24,10 @@ const PianoKey = ({ k }) => {
       {k}
     </button>
   );
+};
+
+PianoKey.propTypes = {
+  k: PropTypes.string.isRequired
 };
 
 export default PianoKey;
