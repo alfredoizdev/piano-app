@@ -1,0 +1,20 @@
+.log {
+  position: absolute;
+  top: 500px;
+  left: 367px;
+  width: 391px;
+  padding: 5px;
+  height: auto;
+  text-align: center;
+  background: white;
+
+  & > .log-container {
+    display: flex;
+    justify-content: start;
+    overflow: auto;
+
+    p {
+      margin: 1px;
+    }
+  }
+}
